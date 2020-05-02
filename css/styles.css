@@ -1,0 +1,170 @@
+body {
+  font-family: Montserrat;
+}
+
+#title {
+  color: #fff;
+}
+
+.container-fluid {
+  padding: 3% 15% 7%;
+}
+
+h1 {
+  font-family: "Montserrat-black";
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+h2{
+  font-family: "Montserrat-bold";
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+/* section */
+.colored-section{
+  background-color: #ff4c68;
+}
+.noncolored-section{
+  background-color: #fff;
+}
+/* Navigation bar */
+.navbar {
+  padding: 0 0 4.5rem 0;
+}
+
+.navbar-brand {
+  font-family: Ubuntu;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item{
+  padding:0 18px 0 18px;
+}
+.nav-link{
+  font-family: "Montserrat-light";
+  font-size: 1.2rem;
+}
+
+/* Buttons */
+
+.Downloadbutton{
+  margin: 5% 3% 5% 0;
+}
+
+/* Titleimage */
+.Titleimage{
+  width: 60%;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 20%;
+
+}
+
+@media (max-width:1100px) {
+  .Titleimage{
+    transform: rotate(0);
+    position: static;
+  }
+  #title{
+    text-align: center;
+  }
+
+}
+
+/* Features */
+#features{
+  padding: 7% 15%;
+  position: relative;
+  z-index: 1;
+}
+.featurebox{
+  text-align: center;
+  font-family: "Montserrat-bold"
+}
+.fas {
+  color:#ef8172;
+  padding:4.5%;
+}
+
+i:hover{
+  color: #ff4c68;
+}
+.far{
+color:#ef8172;
+padding:4.5%;
+}
+
+.Featurestext{
+color:grey;
+text-align: center;
+}
+
+/* testimonials */
+#testimonials{
+  background-color:#ef8172;
+
+  color:#fff;
+  text-align: center;
+}
+.testimonial-image{
+  width: 15%;
+  border-radius: 100%;
+  padding: 2.5% 0%;
+}
+#testimonialsSlidesOnly{
+    padding: 7% 15%;
+}
+/* press */
+#press{
+  background-color: #ef8172;
+  padding-bottom: 5%;
+  text-align: center;
+}
+
+.press-image{
+  width: 15%;
+  margin: 20 px 20px 50px;
+}
+
+/* pricing */
+#pricing{
+  padding: 100px;
+  text-align: center;
+}
+.pricingcol{
+  padding: 3% 2%;
+}
+
+/* call to action */
+#cta{
+  text-align: center;
+}
+
+/* footer */
+#footer{
+  padding-top: 50px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.footer-h3{
+  font-family: "Montserrat-black";
+  font-size: 2rem;
+  line-height: 1.5;
+  width: 75%;
+  padding-left: 200px;
+  padding-bottom: 20px;
+  color: #fff;
+}
+.para-footer{
+  color:grey;
+  font-size: .5rem;
+  padding-top: 1.5%;
+}
+.footer-env{
+  padding: 0% 0.5%;
+  color:black;
+}
