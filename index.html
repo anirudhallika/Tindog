@@ -27,25 +27,6 @@
   })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-R60GTDQUT3DM-2");
 </script>
 <!-- End Aptrinsic Tag-->
-//passing user and account objects:
-aptrinsic("identify",
-  {
-  //User Fields
-    "id": "anirudh12345", // Required for logged in app users
-    "email": "anirudh@TinDog.com",
-    "firstName": "anirudh",
-    "lastName": "allika",
-    "signUpDate": 1522697426479, //unix time in ms
-    "plan" : "gold", //Custom attributes - please create those custom attributes in Aptrinsic via Account Settings to be tracked.
-    "price" : 95.5,
-    "userHash": "" // optional transient for HMAC identification
-  },
-  {
-  //Account Fields
-    "id":"001Tindog1234", //Required
-    "name":"TinDog Account",
-    "Program": "Platinum" // flat custom attributes
- });
 </head>
 
 <body>
@@ -233,8 +214,26 @@ aptrinsic("identify",
     <p class="para-footer">© Copyright 2020 TinDog</p>
 
   </footer>
-
-
+  <div class="app-details" style="color:white">
+  aptrinsic("identify",
+    {
+    //User Fields
+      "id": "anirudh12345", // Required for logged in app users
+      "email": "anirudh@TinDog.com",
+      "firstName": "anirudh",
+      "lastName": "allika",
+      "signUpDate": 1522697426479, //unix time in ms
+      "plan" : "gold", //Custom attributes - please create those custom attributes in Aptrinsic via Account Settings to be tracked.
+      "price" : 95.5,
+      "userHash": "" // optional transient for HMAC identification
+    },
+    {
+    //Account Fields
+      "id":"001Tindog1234", //Required
+      "name":"TinDog Account",
+      "Program": "Platinum" // flat custom attributes
+   });
+  </div>
 </body>
 
 </html>
