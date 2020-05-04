@@ -18,35 +18,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <!-- Aptrinsic Tag-->
-    <script type="text/javascript">
-    (function(n,t,a,e){var i="aptrinsic";n[i]=n[i]||function(){
-        (n[i].q=n[i].q||[]).push(arguments)},n[i].p=e;
-      var r=t.createElement("script");r.async=!0,r.src=a+"?a="+e;
-      var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
-    })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-R60GTDQUT3DM-2");
-  </script>
-  <!-- End Aptrinsic Tag-->
-  <div class="app-details" style="color:white">
-  aptrinsic("identify",
-    {
-    //User Fields
-      "id": "anirudh12345", // Required for logged in app users
-      "email": "anirudh@TinDog.com",
-      "firstName": "anirudh",
-      "lastName": "allika",
-      "signUpDate": 1522697426479, //unix time in ms
-      "plan" : "gold", //Custom attributes - please create those custom attributes in Aptrinsic via Account Settings to be tracked.
-      "price" : 95.5,
-      "userHash": "" // optional transient for HMAC identification
-    },
-    {
-    //Account Fields
-      "id":"001Tindog1234", //Required
-      "name":"TinDog Account",
-      "Program": "Platinum" // flat custom attributes
-   });
-  </div>
+  <script src="app.js"></script>
 </head>
 
 <body>
