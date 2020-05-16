@@ -1,0 +1,16 @@
+body{
+  text-align: center;
+  background-color: #ff4c68;
+}
+p{
+  display: inline-block;
+  margin: auto;
+}
+.textarea{
+  margin-top: 250px;
+}
+.btn{
+margin: auto;
+margin-top: 30px;
+
+}
