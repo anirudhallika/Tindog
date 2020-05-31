@@ -1,0 +1,19 @@
+body{
+  text-align: center;
+  background-color: #ff4c68;
+}
+p{
+  display: inline-block;
+  margin: auto;
+}
+.textarea{
+  margin-top: 50px;
+}
+.btn{
+margin: auto;
+margin-top: 30px;
+
+}
+#footer{
+  margin-top: 230px;
+}
