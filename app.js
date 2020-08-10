@@ -41,3 +41,5 @@ aptrinsic("identify",
 //   });
 aptrinsic('track', 'Engagement', {"name":"Product Release","Audience Size" :5000 ,"Launched" : true , 
 "Launched date":"2018-03-08T18:11:00Z" });
+aptrinsic('track', 'Adoption', {"name":"Product Release","Audience Size" :5000 ,"Launched" : true , 
+"Launched date":"2018-03-08T18:11:00Z" });
