@@ -21,6 +21,26 @@ aptrinsic("identify",
     "name":"TinDog Account",
     "Program": "Platinum" // flat custom attributes
  });
+<script>
+(function(e,t,n){
+  var r=e.Userpilot;
+  e.Userpilot=n;
+  n.queue=[];
+  n.track=function(ev,data){n.queue.push(["track",ev,data])};
+  n.identify=function(id,traits){n.queue.push(["identify",id,traits])};
+  n.reload=function(){n.queue.push(["reload"])};
+  n.init=function(token){n.queue.push(["init", token])};
+  var s=t.createElement("script");
+  s.async=true;
+  s.src="https://js.userpilot.io/sdk/latest.js";
+  var x=t.getElementsByTagName("script")[0];
+  x.parentNode.insertBefore(s,x);
+})(window,document,window.Userpilot||function(){});
+
+// 👇 Initialize with your token
+Userpilot.init("NX-4926e693");
+</script>
+
 //  aptrinsic("identify",
 //    {
 //    //User Fields
