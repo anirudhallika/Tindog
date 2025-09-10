@@ -2,21 +2,138 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Test Userpilot</title>
+  <title>TinDog</title>
 
+  <!-- ========================= -->
+  <!-- Userpilot SDK Setup -->
+  <!-- ========================= -->
+
+  <!-- 1️⃣ Set your app token BEFORE loading SDK -->
   <script>
     window.userpilotSettings = { token: "NX-4926e693" };
   </script>
-  <script src="https://js.userpilot.io/sdk/latest.js" async></script>
+
+  <!-- 2️⃣ Load SDK asynchronously -->
   <script>
+    (function(d, s) {
+      var js = d.createElement(s);
+      js.src = "https://js.userpilot.io/sdk/latest.js";
+      js.async = true;
+      d.head.appendChild(js);
+    })(document, "script");
+
+    // 3️⃣ Wait until SDK is ready
     document.addEventListener("userpilot:ready", function() {
       console.log("✅ Userpilot SDK ready");
-      Userpilot.identify("demo_user_123", { email: "demo@example.com" });
+
+      // Identify a user
+      Userpilot.identify("demo_user_123", {
+        email: "demo@example.com",
+        name: "Demo User",
+        plan: "Free"
+      });
+
+      // Track a page view
       Userpilot.track("Page Viewed");
     });
   </script>
+
+  <!-- ========================= -->
+  <!-- Fonts & CSS -->
+  <!-- ========================= -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/b483f6c27f.js" crossorigin="anonymous"></script>
+
+  <!-- jQuery + Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-  <h1>Hello Userpilot</h1>
+
+  <!-- ========================= -->
+  <!-- Page Content -->
+  <!-- ========================= -->
+
+  <section class="colored-section" id="title">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand text-lowercase" href="">Tindog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cta">Download</a></li>
+            <li class="nav-item"><a class="nav-link" href="indexSecond.html">Dog Age Calculator</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <h1 class="font-weight-bolder">Meet new and interesting dogs nearby.</h1>
+          <button class="btn btn-primary btn-lg btn btn-dark Downloadbutton"><i class="fab fa-apple"></i> Download</button>
+          <button class="btn btn-outline-light btn-lg Downloadbutton"><i class="fab fa-google-play"></i> Download</button>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <img class="Titleimage" src="images/iphone6.png" alt="iphone-mockup">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="noncolored-section" id="features">
+    <div class="container">
+      <div class="row">
+        <div class="featurebox col-lg-4 col-md-12 col-sm-12">
+          <h3><i class="far fa-check-circle fa-2x"></i> <br> Easy to use.</h3>
+          <p class="Featurestext">So easy to use, even your dog could do it.</p>
+        </div>
+        <div class="featurebox col-lg-4 col-md-12 col-sm-12">
+          <h3><i class="fas fa-bullseye fa-2x"></i> <br> Elite Clientele</h3>
+          <p class="Featurestext">We have all the dogs, the greatest dogs.</p>
+        </div>
+        <div class="featurebox col-lg-4 col-md-12 col-sm-12">
+          <h3><i class="fas fa-heart fa-2x"></i> <br> Guaranteed to work.</h3>
+          <p class="Featurestext">Find the love of your dog's life or your money back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="noncolored-section" id="pricing">
+    <h2>A Plan For Every Dog's Needs</h2>
+    <p>Simple and affordable price plans for you and your dog.</p>
+    <!-- Pricing cards go here -->
+  </section>
+
+  <!-- Call to Action -->
+  <section class="colored-section" id="cta">
+    <div class="container-fluid">
+      <h3 class="footer-h3 font-weight-bolder">Find the True Love of Your Dog's Life Today.</h3>
+      <button class="Downloadbutton btn btn-lg btn-dark"><i class="fab fa-apple"></i> Download</button>
+      <button class="Downloadbutton btn btn-lg btn-outline-light"><i class="fab fa-google-play"></i> Download</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="noncolored-section" id="footer">
+    <i class="fab fa-twitter footer-env"></i>
+    <i class="fab fa-facebook-f footer-env"></i>
+    <i class="fab fa-instagram footer-env"></i>
+    <i class="fas fa-envelope footer-env"></i>
+    <p class="para-footer">© Copyright 2020 TinDog</p>
+  </footer>
+
 </body>
 </html>
