@@ -63,3 +63,53 @@ aptrinsic('track', 'Engagement', {"name":"Product Release","Audience Size" :5000
 "Launched date":"2018-03-08T18:11:00Z" });
 aptrinsic('track', 'Adoption', {"name":"Product Release","Audience Size" :5000 ,"Launched" : true , 
 "Launched date":"2018-03-08T18:11:00Z" });
+
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+function App({ isAuthenticated, user }) {
+  const location = useLocation();
+
+  // Identify user when logged in
+  useEffect(() => {
+    if (isAuthenticated && window.Userpilot) {
+      window.Userpilot.identify(user.id, {
+        name: user.name,
+        email: user.email,
+        created_at: user.createdAt,
+        company: {
+          id: user.companyId,
+          name: user.companyName,
+          industry: user.industry,
+          plan: user.plan,
+        },
+      });
+    }
+  }, [isAuthenticated, user]);
+
+  // Reload Userpilot on route change
+  useEffect(() => {
+    if (isAuthenticated && window.Userpilot) {
+      window.Userpilot.reload();
+    }
+  }, [location, isAuthenticated]);
+
+  return (
+    <div>
+      <h1>Welcome {user?.name}</h1>
+      <button
+        onClick={() =>
+          window.Userpilot?.track("Clicked purchase button", {
+            plan: "Pro",
+            price: 99,
+          })
+        }
+      >
+        Buy Now
+      </button>
+    </div>
+  );
+}
+
+export default App;
+
