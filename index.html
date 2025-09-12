@@ -1,71 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your App</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My React SPA</title>
 
   <!-- ✅ Userpilot Initialization -->
   <script>
     window.userpilotSettings = { token: "NX-4926e693" };
   </script>
   <script src="https://js.userpilot.io/sdk/latest.js" async></script>
-
-  <!-- Fonts / CSS / Bootstrap -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    crossorigin="anonymous"
-  />
-  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div id="root"><!-- React App will mount here --></div>
-
-  <!-- Bootstrap + jQuery (optional if you use them) -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-  <!-- ✅ Example Userpilot usage for non-React pages -->
-  <script>
-    // Identify user (only if logged in)
-    function identifyUser() {
-      if (window.Userpilot) {
-        window.Userpilot.identify("456987", {
-          name: "John Doe",
-          email: "john@site-domain.com",
-          created_at: "2018-07-11",
-          company: {
-            id: "123456",
-            name: "Acme Labs",
-            industry: "Technology",
-            plan: "Free",
-          },
-        });
-      }
-    }
-
-    // Track events
-    function trackEvents() {
-      if (window.Userpilot) {
-        window.Userpilot.track("Clicked purchase button", { plan: "Pro" });
-        window.Userpilot.track("Submitted help ticket", {
-          url: "/support",
-          article: "installation",
-        });
-      }
-    }
-
-    // Example: auto-run after page load
-    window.addEventListener("load", () => {
-      identifyUser();
-      // You can call trackEvents() on button clicks, etc.
-    });
-  </script>
+  <!-- React mounts here -->
+  <div id="root"></div>
 </body>
 </html>
